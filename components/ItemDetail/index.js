@@ -136,7 +136,7 @@ console.log(photo)
                     </ViewDescTitle>
                     <Button
                         color={'blue'}
-                        onPress={this._goToYosemite}
+                        onPress={() => this._goToYosemite(`Hôtel Vendôme - Nice Côte d'Azur`)}
                         title='Open in Maps' />
 
                     <ButtonReserve>
@@ -183,7 +183,7 @@ console.log(photo)
                     </ViewDescTitle>
                     <Button
                         color={'blue'}
-                        onPress={this._goToYosemite}
+                        onPress={() => this._goToYosemite(`Soc Nouv de la Reserve de Nice`)}
                         title='Open in Maps' />
         
                             <ButtonReserve>
@@ -230,7 +230,7 @@ console.log(photo)
                     </ViewDescTitle>
                     <Button
                         color={'blue'}
-                        onPress={this._goToYosemite}
+                        onPress={() => this._goToYosemite(`Stade Allianz Riviera`)}
                         title='Open in Maps' />
         
                             <ButtonReserve>
@@ -277,7 +277,7 @@ console.log(photo)
                     </ViewDescTitle>
                     <Button
                         color={'blue'}
-                        onPress={this._goToYosemite}
+                        onPress={() => this._goToYosemite(`Musée Matisse`)}
                         title='Open in Maps' />
         
                             <ButtonReserve>
@@ -295,8 +295,9 @@ console.log(photo)
     addToCart = () => {
         Alert.alert('Sucess !', 'Item has add to cart')
     }
-    _goToYosemite() {
-        openMap({ latitude: 43.66106756624344, longitude: 7.2136030275390794 });
+    _goToYosemite = (adress) =>{
+      //  openMap({ latitude: 43.66106756624344, longitude: 7.2136030275390794 });
+      openMap({ query: adress});
     }
 
 
